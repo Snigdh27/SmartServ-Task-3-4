@@ -1,8 +1,10 @@
-# SmartServ-Task-4
+![image](https://github.com/Snigdh27/SmartServ-Task-4/assets/74950528/aff0090c-c70e-4cf3-aa6f-63931de6cca9)# SmartServ-Task-4
 
 ### Name : Snigdh Kulshreshtha
 ### Email : snigdh27@gmail.com
 #### Deployment Url : https://snigdh27.github.io/SmartServ-Task-4/
+
+#### Password for the login in order to go to dashboard is : SmartServTest@123
 
 This project implements a secure login form with specific validation requirements for the username and password fields. Upon successful login with a predefined password, users are redirected to a dashboard page that contains interactive components. Additionally, there is a "Forgot your password" link that allows users to initiate a password reset by sending an email to support@smartserv.io.
 
