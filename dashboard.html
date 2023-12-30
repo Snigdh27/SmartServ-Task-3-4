@@ -1,0 +1,278 @@
+<!-- Snigdh Kulshreshtha
+snigdh27@gmail.com -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>SmartServ-Dashboard</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="css/style.css"> <!-- Your custom styles -->
+
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+
+    <style>
+      .chart-container {
+        height: 300px; 
+        overflow-y: scroll; 
+      } 
+
+        body {
+      background-color: #e9e7e7 
+  }
+
+
+    </style>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id="content">
+
+          <br><h5 class="ml-5" style="font-weight: bold;">Company Metrics</h5>
+          <div class="container-fuild">
+                  <div class="row m-4">
+
+                          <div class="col-sm-3">
+                            <div class="card bordercorner ">
+                              <div class="card-body"> 
+                                <h4 style="color: #54c4a4;">$ 406,411.29</h4>
+                                <label>Total Revenue</label>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-sm-3 ">
+                            <div class="card bordercorner">
+                              <div class="card-body">
+                                  <h4>$ 620</h4>
+                                  <label>Total Jobs Average</label>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="col-sm-3">
+                                  <div class="card bordercorner">
+                                    <div class="card-body">
+                                        <h4>655</h4>
+                                        <label >Tickets Cleared</label>
+                                    </div>
+                                  </div>
+                          </div>
+
+                          <div class="col-sm-3 ">
+                                  <div class="card bordercorner">
+                                    <div class="card-body">
+                                        <h4>735</h4>
+                                        <label>Tickets Scheduled</label>
+                                    </div>
+                                  </div>
+                          </div>
+                    </div>
+
+          </div>
+
+              <div class="container-fuild">
+                <div class="row m-4">
+                      
+                      <div class="col-sm-3 ">
+                        <div class="card bordercorner">
+                          <div class="card-body">
+                              <h4 style="color: red;">$ 110,448.8</h4>
+                              <label>Outstanding Amount</label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-sm-3 ">
+                              <div class="card bordercorner">
+                                <div class="card-body">
+                                    <h4>105</h4>
+                                    <label>Membership Sold</label>
+                                </div>
+                              </div>
+                      </div>
+
+                      <div class="col-sm-3 ">
+                              <div class="card bordercorner">
+                                <div class="card-body">
+                                    <h4>436</h4>
+                                    <label>Jobs Completed</label>
+                                </div>
+                              </div>
+                      </div>
+
+                      <div class="col-sm-3">
+                          <div class="card bordercorner">
+                            <div class="card-body "> 
+                                <h4>65</h4>
+                                <label>Tickets Cancelled</label>
+                            </div>
+                          </div>
+                      </div>
+                </div>
+
+              </div>
+
+
+
+<div class="container-fluid">
+  <div class="row m-4">
+    <div class="col-md-6">
+      <h5 class="mt-3 mb-3" style="font-weight: bold;">Revenue By Job Location</h5>
+      <div class="card">
+        <div class="card-body chart-container">
+          <canvas id="graph1"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 mb-4">
+      <h5 class="mt-3 mb-3" style="font-weight: bold;">Revenue By Job Track</h5>
+      <div class="card">
+        <div class="card-body chart-container">
+          <canvas id="graph2" ></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script rel="stylesheet" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"></script>
+
+
+    
+
+ <script>
+  let graph1 = document.getElementById('graph1').getContext('2d');
+  let masspopChart1 = new Chart(graph1, {
+    type: 'horizontalBar',
+    data: {
+      labels: ['Everett', 'Seattle', 'Lynnwood', 'Bothell', 'Mukilteo', 'Edmonds'],
+      datasets: [{
+        data: [66000, 61000, 34000, 33000, 31000, 24000],
+        backgroundColor: '#54c4a4',
+        hoverBorderWidth: 3,
+        hoverBorderColor: 'white',
+      }]
+    },
+    options: {
+      legend: {
+        display: false
+      },
+      scales: {
+        xAxes: [{
+          scaleLabel: {
+            display: true,
+            labelString: 'Revenue for November 2019',
+            fontSize: 13,
+            fontStyle: 'bold',
+            position: 'top',
+            padding: 30,
+          },
+          ticks: {
+            beginAtZero: true,
+            max: 70000,
+            stepSize: 5000,
+            maxRotation: -30,
+            minRotation: -30,
+            autoSkip: false,
+            padding: 10,
+            fontStyle: 'bold',
+            callback: function (value, index, values) {
+              return '$' + value;
+            }
+          },
+          gridLines: {
+            display: true
+          },
+          angleLines: {
+            display: true
+          }
+        }],
+        yAxes: [{
+          barPercentage: 0.5,
+          gridLines: {
+            display: false
+          },
+          ticks: {
+            fontStyle: 'bold',
+          },
+        }]
+      }
+    }
+  });
+
+  let graph2 = document.getElementById('graph2').getContext('2d');
+  let masspopChart2 = new Chart(graph2, {
+    type: 'horizontalBar',
+    data: {
+      labels: ['Service Plumbing', 'Bid Work HVAC', 'Service HVAC', 'Bid Work Plumbing', 'HWT Replacement', 'Maintenance', 'Material Sale'],
+      datasets: [{
+        data: [142000, 89000, 59000, 57000, 24000, 22000, 2000],
+        backgroundColor: '#54c4a4',
+        hoverBorderWidth: 3,
+        hoverBorderColor: 'white',
+      }]
+    },
+    options: {
+      legend: {
+        display: false
+      },
+      scales: {
+        xAxes: [{
+          scaleLabel: {
+            display: true,
+            labelString: 'Revenue for November 2019',
+            fontSize: 13,
+            fontStyle: 'bold',
+            padding: 30,
+          },
+          ticks: {
+            beginAtZero: true,
+            max: 150000,
+            stepSize: 20000,
+            maxRotation: -30,
+            minRotation: -30,
+            autoSkip: false,
+            padding: 10,
+            fontStyle: 'bold',
+            callback: function (value, index, values) {
+              return '$' + value;
+            }
+          },
+          gridLines: {
+            display: true
+          },
+          angleLines: {
+            display: true
+          }
+        }],
+        yAxes: [{
+          barPercentage: 0.5,
+          gridLines: {
+            display: false
+          },
+          ticks: {
+            fontStyle: 'bold',
+          },
+        }]
+      }
+    }
+  });
+</script>
+</body>
+
+</html>

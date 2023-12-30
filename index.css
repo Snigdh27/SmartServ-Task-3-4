@@ -1,0 +1,39 @@
+html,
+body {
+    height: 100%;
+}
+
+.container {
+    /* margin: auto; */
+    height: 100%;
+    display: flex;
+    width: 48%;
+    justify-content: center;
+    align-items: center;
+}
+.containerinner{
+    display: flex;
+    width: 29em;
+    height: 19em;
+    justify-content: center;
+    border-radius: 2%;
+    align-items: center;
+
+}
+.but{
+    background: #71BE58;
+    color: white;
+}
+.containerinner { 
+    height: 70%;
+    position: relative;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.bordercorner{
+    border-left: 0.7em solid #54c4a4;
+  }
