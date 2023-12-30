@@ -1,4 +1,4 @@
-![image](https://github.com/Snigdh27/SmartServ-Task-4/assets/74950528/aff0090c-c70e-4cf3-aa6f-63931de6cca9)# SmartServ-Task-4
+
 
 ### Name : Snigdh Kulshreshtha
 ### Email : snigdh27@gmail.com
